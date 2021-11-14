@@ -1,0 +1,19 @@
+{
+    "main":{
+        "ClientID":909528807491403858,
+        "State":"NlNTENDO SWlTCHでプレイ中",
+        "Details":"SpIatoon 99",
+        "time":true,
+        "Large_Image":"splat",
+        "Large_Text":"You got bamboozled!",
+        "Small_Image":"switch",
+        "Small_Text":"hello"
+    },
+    "button":{
+        "button":true,
+        "button1_label":"参加する",
+        "button1_url":"https://www.youtube.com/watch?v=rElTkPBjATk",
+        "button2_label":"購入する",
+        "button2_url":"https://www.youtube.com/watch?v=rElTkPBjATk"
+    }
+}

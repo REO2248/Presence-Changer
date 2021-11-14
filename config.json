@@ -1,0 +1,19 @@
+{
+    "main":{
+        "ClientID":1234567890,
+        "State":"Presence Changerを使用中",
+        "Details":"いえい",
+        "time":true,
+        "Large_Image":"",
+        "Large_Text":"",
+        "Small_Image":"",
+        "Small_Text":""
+    },
+    "button":{
+        "button":true,
+        "button1_label":"ダウンロードする",
+        "button1_url":"https://github.com/Firestormfan/Presence-Changer",
+        "button2_label":null,
+        "button2_url":null
+    }
+}
