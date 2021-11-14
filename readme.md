@@ -39,7 +39,7 @@ Rich PresenceタブのArt Assetsに行き、Add Image(s)から登録できます
 ![dev](https://cdn.discordapp.com/attachments/836119816900313100/909561230795087902/unknown.png)
 
 # Tips
-State, Detailsは空にできません。
+State, Detailsは空にできません。  
 button2_label または button2_url を null にすると、ボタン2を消すことができます。
 
 # わからないことがある、エラーがでた
