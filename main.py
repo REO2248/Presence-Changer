@@ -24,6 +24,7 @@ SOFTWARE.
 
 import pypresence
 import time
+import traceback
 import json
 
 config = json.load(open("config.json", "r", encoding="utf-8"))
@@ -58,31 +59,60 @@ else:
     start = time.time()
 
 RPC = pypresence.Presence(ClientID)
-RPC.connect()
-print("接続完了!")
 
-if IsbuttonsTrue:
-    while True:
-        RPC.update(
-            state=State,
-            details=Details,
-            start=start,
-            large_image=Large_Image,
-            large_text=Large_Text,
-            small_image=Small_Image,
-            small_text=Small_Text,
-            buttons=Button,
-        )
-        time.sleep(15)
-else:
-    while True:
-        RPC.update(
-            state=State,
-            details=Details,
-            start=start,
-            large_image=Large_Image,
-            large_text=Large_Text,
-            small_image=Small_Image,
-            small_text=Small_Text,
-        )
-        time.sleep(15)
+try:
+    RPC.connect()
+except pypresence.exceptions.InvalidPipe:
+    x = input("Discordが検出されませんでした。 再検出を開始する場合は y と入力してください。")
+    if x == "y":
+        for i in range(10):
+            if not i == 9:
+                try:
+                    print(f"再検出中...({i+1})")
+                    RPC.connect()
+                    break
+                except pypresence.exceptions.InvalidPipe:    
+                    time.sleep(4)
+            if i == 9:
+                print("再検出に失敗しました。")
+                input("終了します。")
+                exit()
+    else:
+        exit()
+
+def main():
+    print("Rich Presenceへ接続完了！ RichなDiscordが今、始まる！")
+    try:
+        if IsbuttonsTrue:
+            while True:
+                RPC.update(
+                    state=State,
+                    details=Details,
+                    start=start,
+                    large_image=Large_Image,
+                    large_text=Large_Text,
+                    small_image=Small_Image,
+                    small_text=Small_Text,
+                    buttons=Button,
+                )
+                time.sleep(15)
+        else:
+            while True:
+                RPC.update(
+                    state=State,
+                    details=Details,
+                    start=start,
+                    large_image=Large_Image,
+                    large_text=Large_Text,
+                    small_image=Small_Image,
+                    small_text=Small_Text,
+                )
+                time.sleep(15)
+    except KeyboardInterrupt:
+        RPC.close()
+        print("Rich Presenceから切断しました!")
+    except Exception as e:
+        print(traceback.format_exc())
+        input("エラーが発生しました。繰り返し発生する場合は Twitter @brightnoahb に連絡してください。")
+
+main()
