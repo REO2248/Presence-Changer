@@ -32,7 +32,7 @@ Presence Changerには[Developer Portal](https://discord.com/developers/applicat
 | button1_label | 一つ目のボタンに表示される文字 |
 | button1_url | 一つ目のボタンを押した時に飛ぶリンク |
 | button2_label | button1_labelを同じ nullにするとボタン2がなくなる |
-| button2_url | button2_urlと同じ |
+| button2_url | button1_urlと同じ |
 
 # Image
 Rich PresenceタブのArt Assetsに行き、Add Image(s)から登録できます。
