@@ -1,19 +1,22 @@
 {
     "main":{
-        "ClientID":909528807491403858,
-        "State":"NlNTENDO SWlTCHでプレイ中",
-        "Details":"SpIatoon 99",
+        "ClientID":911586015658016818,
+        "State":"三池淵市を現地指導中",
+        "Details":"敬愛なる金正恩同志が",
         "time":true,
-        "Large_Image":"splat",
-        "Large_Text":"You got bamboozled!",
-        "Small_Image":"switch",
-        "Small_Text":"hello"
+        "Large_Image":"kim",
+        "Large_Text":"경애하는 김정은동지!!",
+        "Small_Image":"kim",
+        "Small_Text":"당신께 충실하리라!!"
     },
     "button":{
         "button":true,
-        "button1_label":"参加する",
-        "button1_url":"https://www.youtube.com/watch?v=rElTkPBjATk",
-        "button2_label":"購入する",
-        "button2_url":"https://www.youtube.com/watch?v=rElTkPBjATk"
+        "button1_label":"様子を見る",
+        "button1_url":"http://uriminzokkiri.com/index.php?ptype=crevo4&mtype=play&ctype=1&no=8194",
+        "button2_label":"위대한 김정은동지",
+        "button2_url":"https://youtu.be/pnuOzgk9mMA"
+    },
+    "web":{
+        "port":8081
     }
 }

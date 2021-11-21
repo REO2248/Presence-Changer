@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang=”ja”>
+    <head>
+        <title>Presence Changer</title>
+            <meta charse=”utf8″/>
+            <style>
+                ul {
+                    padding: 0px 0px ;
+                }
+
+                li {
+                    list-style: none;
+                    display: inline-block;
+                    min-height: 2em;
+                }
+
+                li ul li{
+                    list-style: none;
+                    display: list-item;
+                }
+
+            </style>
+            <script>
+                function Reset() {
+                    xhr = new XMLHttpRequest();
+                    xhr.open('POST', '/reset', true);
+                    xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
+                    xhr.send();
+                }
+                
+                function StateUpdate() {
+                    xhr = new XMLHttpRequest();
+                    xhr.open('POST', '/update/main/State', true);
+                    xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
+                    xhr.send("value="+State.value);
+                }
+
+                function DetailsUpdate() {
+                    xhr = new XMLHttpRequest();
+                    xhr.open('POST', '/update/main/Details', true);
+                    xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
+                    xhr.send("value="+Details.value);
+                }
+
+                function Large_ImageUpdate() {
+                    xhr = new XMLHttpRequest();
+                    xhr.open('POST', '/update/main/Large_Image', true);
+                    xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
+                    xhr.send("value="+Large_Image.value);
+                }
+
+                function Large_TextUpdate() {
+                    xhr = new XMLHttpRequest();
+                    xhr.open('POST', '/update/main/Large_Text', true);
+                    xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
+                    xhr.send("value="+Large_Text.value);
+                }
+
+                function Small_ImageUpdate() {
+                    xhr = new XMLHttpRequest();
+                    xhr.open('POST', '/update/main/Small_Image', true);
+                    xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
+                    xhr.send("value="+Small_Image.value);
+                }
+
+                function Small_TextUpdate() {
+                    xhr = new XMLHttpRequest();
+                    xhr.open('POST', '/update/main/Small_Text', true);
+                    xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
+                    xhr.send("value="+Small_Text.value);
+                }
+
+                function EnableButton() {
+                    xhr = new XMLHttpRequest();
+                    xhr.open('POST', '/update/buttons/button/True', true);
+                    xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
+                    xhr.send();
+                }
+
+                function DisableButton() {
+                    xhr = new XMLHttpRequest();
+                    xhr.open('POST', '/update/buttons/button/False', true);
+                    xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
+                    xhr.send();
+                }
+                
+                function button1_label_Update() {
+                    xhr = new XMLHttpRequest();
+                    xhr.open('POST', '/update/main/button1_label', true);
+                    xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
+                    xhr.send("value="+button1_label.value);
+                }
+
+                function button1_url_Update() {
+                    xhr = new XMLHttpRequest();
+                    xhr.open('POST', '/update/main/button1_url', true);
+                    xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
+                    xhr.send("value="+button1_url.value);
+                }
+
+                function button2_label_Update() {
+                    xhr = new XMLHttpRequest();
+                    xhr.open('POST', '/update/main/button2_label', true);
+                    xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
+                    xhr.send("value="+button2_label.value);
+                }
+
+                function button2_url_Update() {
+                    xhr = new XMLHttpRequest();
+                    xhr.open('POST', '/update/main/button1_url', true);
+                    xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
+                    xhr.send("value="+button2_url.value);
+                }
+            </script>
+        </head></html>
+<body> 
+    <h1>Presence Changer</h1>
+
+    <p><input type="button" value="タイマーをリセット" onclick="Reset();"/></p>
+
+    <ul>
+        <li>
+            <ul>
+                <li>State</li>
+                <li>Details</li>
+                <li>Large_Image</li>
+                <li>Large_Text</li>
+                <li>Small_Image</li>
+                <li>Small_Text</li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li><input type="text" value="" id="State"><input type="submit" onclick="StateUpdate();" value="送信"></li>
+                <li><input type="text" value="" id="Details"><input type="submit" onclick="DetailsUpdate();" value="送信"></li>
+                <li><input type="text" value="" id="Large_Image"><input type="submit" onclick="Large_ImageUpdate();" value="送信"></li>
+                <li><input type="text" value="" id="Large_Text"><input type="submit" onclick="Large_TextUpdate();" value="送信"></li>
+                <li><input type="text" value="" id="Small_Image"><input type="submit" onclick="Small_ImageUpdate();" value="送信"></li>
+                <li><input type="text" value="" id="Small_Text"><input type="submit" onclick="Small_TextUpdate();" value="送信"></li>
+            </ul>
+        </li>
+    </ul>
+
+    <p><input type="button" value="ボタンを有効化" onclick="EnableButton();"/><input type="button" value="ボタンを無効化" onclick="DisableButton();"/></p>
+
+    <ul>
+        <li>
+            <ul>
+                <li>button1_label</li>
+                <li>button1_url</li>
+                <li>button2_label</li>
+                <li>button2_url</li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li><input type="text" value="" id="button1_label"><input type="submit" onclick="button1_label_Update();" value="送信"></li>
+                <li><input type="url" value="" id="button1_url"><input type="submit" onclick="button1_url_Update();" value="送信"></li>
+                <li><input type="text" value="" id="button2_label"><input type="submit" onclick="button2_label_Update();" value="送信"></li>
+                <li><input type="url" value="" id="button2_url"><input type="submit" onclick="button2_url_Update();" value="送信"></li>
+            </ul>
+        </li>
+    </ul>
+
+    <a href="http://discord.com/developers/applications/{{clientid}}/rich-presence/assets" target="_blank" rel="noopener noreferrer">画像設定画面</a>
+</body>
+</html>

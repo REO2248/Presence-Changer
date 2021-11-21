@@ -1,19 +1,22 @@
 {
     "main":{
-        "ClientID":1234567890,
-        "State":"Presence Changerを使用中",
-        "Details":"いえい",
+        "ClientID":432980957394370572,
+        "State":"Presence Changer(改変版)を使用中",
+        "Details":"こんにちは。",
         "time":true,
-        "Large_Image":"",
-        "Large_Text":"",
-        "Small_Image":"",
-        "Small_Text":""
+        "Large_Image":"_",
+        "Large_Text":"__",
+        "Small_Image":"_",
+        "Small_Text":"__"
     },
     "button":{
         "button":true,
         "button1_label":"ダウンロードする",
-        "button1_url":"https://github.com/Firestormfan/Presence-Changer",
-        "button2_label":null,
-        "button2_url":null
+        "button1_url":"https://github.com/REO2248/Presence-Changer",
+        "button2_label":"改変元(By Firestormfan)",
+        "button2_url":"https://github.com/Firestormfan/Presence-Changer"
+    },
+    "web":{
+        "port":8081
     }
 }
